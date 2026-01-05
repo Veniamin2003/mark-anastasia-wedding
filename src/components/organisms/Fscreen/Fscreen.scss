@@ -1,0 +1,57 @@
+.o-fscreen {
+    height: 520px;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0 auto;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+    
+    @media(max-width: 1023px) {
+        max-width: 100%;
+        border-radius: 0;
+    }
+
+    &__text {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 20px;
+        z-index: 15;
+        color: var(--white-bg-color);
+        align-items: center;
+    }
+    
+    &__title,
+    &__date {
+        font-family: var(--additionalFont), sans-serif;
+        line-height: normal;
+    }
+    
+    &__picture {
+        position: absolute;
+        inset: 0;
+        z-index: 5;
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            vertical-align: bottom;
+            object-position: top;
+        }
+    }
+    &__blur {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 240px;
+        background: linear-gradient(180deg, rgba(67, 45, 28, 0.00) 9.58%, #150E0E 106.1%);
+        z-index: 10;
+    }
+}
