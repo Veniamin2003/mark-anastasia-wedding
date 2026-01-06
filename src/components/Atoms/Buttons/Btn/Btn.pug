@@ -1,10 +1,13 @@
 //- block: html
-//- style: 'primary' | 'transparent'
-mixin Btn(style = 'primary')
+//- style: 'black' | 'grey'
+//- size: 'small' | 'big'
+mixin Btn(style = 'black', size='small')
     - var tag = attributes.href ? 'a' : 'button'
 
     #{tag}(
-        class='a-btn a-btn--'+style
+        class='a-btn'
+        class!='a-btn--'+style
+        class!='a-btn--'+size
         class!=attributes.class
         onclick!=attributes.onclick
         disabled!=attributes.disabled

@@ -1,10 +1,11 @@
 mixin Dress()
     .o-dress
-        .o-dress__text
-            +Title(4).o-dress__title Дресс-код
-            .o-dress__desc Нам будет очень приятно, если <br> вы поддержите цветовую <br>гамму торжества
-        .o-dress__colors
-            .o-dress__color
-            .o-dress__color
-            .o-dress__color
-            .o-dress__color
+        .o-dress__picture
+            img(src="/img/dress.webp").isHiddenTab.isHiddenMob
+            img(src="/img/dress-mob.webp").isHiddenDesc
+        .o-dress__right
+            +Title(2).o-dress__title детали
+            .o-dress__content
+                .o-dress__text Мы будем благодарны, если <br>вы поддержите цветовую гамму <br>торжества при выборе наряда.
+                .o-dress__info.isHiddenTab.isHiddenMob Постарайтесь не приходить <br>на мероприятие в чёрном
+        .o-dress__info.isHiddenDesc Постарайтесь не приходить <br>на мероприятие в чёрном

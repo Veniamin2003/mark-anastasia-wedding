@@ -1,14 +1,18 @@
 .m-question {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 13px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 
     &__text {
-        font-size: 18px;
-        color: var(--basic-color);
+        font-size: 24px;
+        color: var(--black-color);
+        
+        @media (max-width: 1023px) {
+            font-size: 18px;
+        }
     }
     &__items {
         display: flex;
@@ -18,25 +22,29 @@
     &__wrap {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 15px;
     }
 
     &__label {
         display: flex;
         align-items: center;
         cursor: pointer;
-        font-size: 16px;
-        color: var(--basic-color);
+        font-size: 22px;
+        color: var(--black-color);
         -webkit-tap-highlight-color: transparent;
+        
+        @media (max-width: 1023px) {
+            font-size: 16px;
+        }
     }
     &__custom {
         &-radio {
             width: 14px;
             height: 14px;
-            border: 1px solid var(--primary-lighter-color);
+            border: 1px solid var(--black-color);
             border-radius: 50%;
             display: inline-block;
-            margin-right: 14px;
+            margin-right: 16px;
             position: relative;
         }
     }
@@ -46,15 +54,15 @@
     }
 
     input[type="radio"]:checked + &__custom-radio {
-        border: 1px solid #D6CCC2;
-        background-color: var(--primary-lighter-color);
+        border: 1px solid var(--black-color);
+        background-color: var(--black-color);
     }
 
     &__input {
         width: 100%;
         opacity: 0.7;
-        pointer-events: none;
         transition: var(--defaultTransition);
+        pointer-events: none;
 
         &.isActive {
             opacity: 1;

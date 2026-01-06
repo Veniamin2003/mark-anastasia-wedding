@@ -15,10 +15,15 @@
         }
     }
     &--2 {
+        font-family: var(--additionalFont), sans-serif;
         font-size: 36px;
+        font-style: normal;
+        font-weight: 400;
         line-height: normal;
+        text-transform: uppercase;
 
         @media (max-width: 1023px) {
+            font-size: 20px;
         }
         @media (max-width: 767px) {
         }

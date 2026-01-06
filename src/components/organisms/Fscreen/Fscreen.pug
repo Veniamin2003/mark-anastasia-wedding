@@ -1,9 +1,57 @@
 mixin Fscreen()
     .o-fscreen
-        .o-fscreen__text
-            +Title('1').o-fscreen__title Иосиф & Надежда
-            +Title('2').o-fscreen__date 04 10 25, 11: 00
+        .o-fscreen__logo
+           img(src="/img/logo.svg")
+
+
         .o-fscreen__picture
-            img(src="/img/fscreen.webp")
-        .o-fscreen__blur
+            picture
+                source(srcset="/img/fscreen.webp" media="(min-width: 768px)")
+                img(
+                    src="/img/fscreen-mob.webp"
+                    alt="Mobile Preview"
+                    id="videoPreview"
+                )
+
+        .o-fscreen__video
+            video#myVideo(
+                preload="auto"
+                muted
+                playsinline
+                loop
+            )
+                source(
+                    src="/files/video/fscreen_h264.mp4"
+                    media="(min-width: 768px)"
+                    type="video/mp4"
+                )
+                source(
+                    src="/files/video/fscreen-mob_h264.mp4"
+                    media="(max-width: 767px)"
+                    type="video/mp4"
+                )
+        //.o-fscreen__video
+        //    video#myVideo(
+        //        preload="metadata"
+        //        muted
+        //        playsinline
+        //        webkit-playsinline
+        //        loop
+        //        playsinline="true"
+        //    )
+        //        source(
+        //            src="/files/video/fscreen_h264.mp4"
+        //            media="(min-width: 768px)"
+        //            type="video/mp4"
+        //        )
+        //        source(
+        //            src="/files/video/fscreen-mob_h264.mp4"
+        //            media="(max-width: 767px)"
+        //            type="video/mp4"
+        //        )
+
+        .o-fscreen__arrow
+            +svg('arrow-s')
+
+
 

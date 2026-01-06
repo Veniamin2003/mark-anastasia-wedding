@@ -1,0 +1,23 @@
+mixin Program
+    .o-program
+        .o-program__left
+            +Title('2').o-program__title порядок <br>церемонии венчания
+            .o-program__items
+                .o-program__item
+                    .o-program__item-title / сбор гостей
+                    .o-program__item-info 10:30
+                .o-program__item
+                    .o-program__item-title / начало церемонии
+                    .o-program__item-info 11:00
+                .o-program__item
+                    .o-program__item-title / венчание
+                    .o-program__item-info 1 час
+                .o-program__item
+                    .o-program__item-title / Поздравительная <br>и музыкальная программа
+                    .o-program__item-info 1 час
+                .o-program__item
+                    .o-program__item-title / Фуршет и фотосессия <br>с женихом и невестой
+                    .o-program__item-info 1 час
+        .o-program__picture
+            img(src="/img/program.webp").isHiddenTab.isHiddenMob
+            img(src="/img/program-mob.webp").isHiddenDesc

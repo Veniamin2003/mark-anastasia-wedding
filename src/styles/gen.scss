@@ -195,6 +195,7 @@ select {
 @import '../components/Atoms/Label/Label';
 
 @import '../components/Wrappers/Container/Container';
+@import '../components/Wrappers/GridContainer/GridContainer';
 @import '../components/Wrappers/Blocks/Blocks';
 @import '../components/Wrappers/Block/Block';
 @import '../components/Wrappers/Grid/Grid';
@@ -205,10 +206,12 @@ select {
 
 @import '../components/Organisms/Fscreen/Fscreen';
 @import '../components/Organisms/About/About';
+@import '../components/Organisms/Program/Program';
 @import '../components/Organisms/Location/Location';
 @import '../components/Organisms/Dress/Dress';
 @import '../components/Organisms/Registration/Registration';
 @import '../components/Organisms/Bottom/Bottom';
+@import '../components/Organisms/Video/Video';
 @import '../components/Organisms/BtnUp/BtnUp';
 @import '../components/Organisms/Cookie/Cookie';
 @import '../components/Organisms/Notify/Notify';
@@ -219,5 +222,6 @@ select {
 @import '../components/Organisms/Popups/Base/Base';
 @import '../components/Organisms/Popups/Form/Form';
 @import '../components/Organisms/Popups/Success/Success';
+@import '../components/Organisms/Popups/Registration/Registration';
 
 
