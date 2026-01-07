@@ -13,31 +13,28 @@ mixin Fscreen()
                     id="videoPreview"
                 )
 
-        .o-fscreen__video
-            video#myVideo(
-                preload="auto"
-                muted
-                playsinline
-                loop
+        // Десктопное видео
+        .o-fscreen__video.isHiddenTab.isHiddenMob
+            video(
+                id="video-ds"
+                autoplay muted playsinline loop preload="auto"
             )
-                source(
-                    src="/files/video/fscreen_h264.mp4"
-                    media="(min-width: 768px)"
-                    type="video/mp4"
-                )
-                source(
-                    src="/files/video/fscreen-mob_h264.mp4"
-                    media="(max-width: 767px)"
-                    type="video/mp4"
-                )
+                source(src="/files/video/fscreen_h264.mp4" type="video/mp4")
+
+        // Мобильное видео
+        .o-fscreen__video.isHiddenDesc
+            video(
+                id="video-mb"
+                autoplay muted playsinline loop preload="auto"
+            )
+                source(src="/files/video/fscreen-mob_h264.mp4" type="video/mp4")
+
         //.o-fscreen__video
         //    video#myVideo(
-        //        preload="metadata"
+        //        preload="auto"
         //        muted
         //        playsinline
-        //        webkit-playsinline
         //        loop
-        //        playsinline="true"
         //    )
         //        source(
         //            src="/files/video/fscreen_h264.mp4"
@@ -52,6 +49,26 @@ mixin Fscreen()
 
         .o-fscreen__arrow
             +svg('arrow-s')
+
+        //.o-fscreen__video
+               //    video#myVideo(
+               //        preload="metadata"
+               //        muted
+               //        playsinline
+               //        webkit-playsinline
+               //        loop
+               //        playsinline="true"
+               //    )
+               //        source(
+               //            src="/files/video/fscreen_h264.mp4"
+               //            media="(min-width: 768px)"
+               //            type="video/mp4"
+               //        )
+               //        source(
+               //            src="/files/video/fscreen-mob_h264.mp4"
+               //            media="(max-width: 767px)"
+               //            type="video/mp4"
+               //        )
 
 
 
